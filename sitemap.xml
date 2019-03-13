@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jianwenz.github.io/2019/03/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2019-03-08T11:04:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/07/centos7%E9%83%A8%E7%BD%B2kubernetes%E9%9B%86%E7%BE%A4/</loc>
+    <lastmod>2018-07-11T11:04:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/07/kubernetes%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
+    <lastmod>2018-07-10T11:04:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25/</loc>
+    <lastmod>2018-06-28T15:18:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/</loc>
+    <lastmod>2018-06-27T15:18:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23/</loc>
+    <lastmod>2018-06-26T15:18:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22/</loc>
+    <lastmod>2018-06-24T15:17:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21/</loc>
+    <lastmod>2018-06-02T11:04:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/2018/05/centos%E4%BD%BF%E7%94%A8eple%E6%BA%90%E5%AE%89%E8%A3%85pyhton3.4%E5%92%8Cpip3/</loc>
+    <lastmod>2018-05-29T11:04:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/blog/</loc>
+    <lastmod>2018-06-02T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/categories/django/</loc>
+    <lastmod>2018-06-28T15:18:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/django/</loc>
+    <lastmod>2018-06-28T15:18:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/categories/hugo/</loc>
+    <lastmod>2019-03-08T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/hugo/</loc>
+    <lastmod>2019-03-08T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/</loc>
+    <lastmod>2019-03-08T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/categories/kubernetes/</loc>
+    <lastmod>2018-07-11T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/kubernetes/</loc>
+    <lastmod>2018-07-11T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/categories/pip/</loc>
+    <lastmod>2018-05-29T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/pip/</loc>
+    <lastmod>2018-05-29T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/post/</loc>
+    <lastmod>2019-03-08T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/categories/python/</loc>
+    <lastmod>2018-06-28T15:18:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/python/</loc>
+    <lastmod>2018-06-28T15:18:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jianwenz.github.io/tags/</loc>
+    <lastmod>2018-06-02T11:04:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/blog/</link>
+    <description>Recent content in Blog on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Jun 2018 11:04:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django2.0搭建个人博客(1)</title>
+      <link>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21/</link>
+      <pubDate>Sat, 02 Jun 2018 11:04:16 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21/</guid>
+      <description>&lt;h3 id=&#34;font-color-gray-django的基本架构-font&#34;&gt;&lt;font color=&#34;gray&#34;&gt;Django的基本架构&lt;/font&gt;&lt;/h3&gt;
+
+&lt;p&gt;本教程详细记录CentOS下使用Django2.0的博客搭建步骤。&lt;br /&gt;
+如果只是以搭建一个博客并维护内容为目的，在网上可以找到很多免费博客平台，也可以使用Github+Hugo/Hexo来搭建一个免费的静态博客。&lt;/p&gt;
+
+&lt;p&gt;采用独立服务器上使用Django搭建主要出于以下考虑：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;加深理解Django和Python&lt;/li&gt;
+&lt;li&gt;记录实践过程遇到的技术问题，提升自己也帮助其他人&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

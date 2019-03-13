@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/pip/</link>
+    <description>Recent content in Pip on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 May 2018 11:04:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS使用eple源安装Pyhton3.4和pip3</title>
+      <link>https://jianwenz.github.io/2018/05/centos%E4%BD%BF%E7%94%A8eple%E6%BA%90%E5%AE%89%E8%A3%85pyhton3.4%E5%92%8Cpip3/</link>
+      <pubDate>Tue, 29 May 2018 11:04:16 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/05/centos%E4%BD%BF%E7%94%A8eple%E6%BA%90%E5%AE%89%E8%A3%85pyhton3.4%E5%92%8Cpip3/</guid>
+      <description>&lt;p&gt;Centos系统中自带的Python2.x，如果希望在centos上使用Python3则需要安装。最简便的&lt;code&gt;Python3&lt;/code&gt;安装方法是使用&lt;code&gt;eple&lt;/code&gt;源通过&lt;code&gt;yum&lt;/code&gt;命令。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

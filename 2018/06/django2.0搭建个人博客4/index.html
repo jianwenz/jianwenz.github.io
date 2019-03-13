@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.54.0 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Zhang Jianwen">
+<meta name="keywords" content="Django核心Models/View/URL/Templte">
+<meta name="description" content="Django核心Models/View/URL/Templte
+
+本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)">
+
+
+<meta property="og:description" content="Django核心Models/View/URL/Templte
+
+本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django2.0搭建个人博客(4)">
+<meta name="twitter:title" content="Django2.0搭建个人博客(4)">
+<meta property="og:url" content="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+<meta property="twitter:url" content="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+<meta property="og:site_name" content="Jianwen&#39;s Blog">
+<meta property="og:description" content="Django核心Models/View/URL/Templte
+
+本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)">
+<meta name="twitter:description" content="Django核心Models/View/URL/Templte
+
+本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-06-27T15:18:01">
+  
+  
+    <meta property="article:modified_time" content="2018-06-27T15:18:01">
+  
+  
+  
+    
+      <meta property="article:section" content="Python">
+    
+      <meta property="article:section" content="Django">
+    
+  
+  
+    
+      <meta property="article:tag" content="Python">
+    
+      <meta property="article:tag" content="Django">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://jianwenz.github.io/images/profile.jpg">
+  <meta property="twitter:image" content="https://jianwenz.github.io/images/profile.jpg">
+
+
+    <title>Django2.0搭建个人博客(4)</title>
+
+    <link rel="icon" href="https://jianwenz.github.io/images/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://jianwenz.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://jianwenz.github.io/">Jianwen&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://jianwenz.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://jianwenz.github.io/images/profile.jpg" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://jianwenz.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://jianwenz.github.io/images/profile.jpg" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Zhang Jianwen</h4>
+        
+          <h5 class="sidebar-profile-bio">Life is short, so enjoy it to the fullest.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/jianwenz" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Django2.0搭建个人博客(4)
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-06-27T15:18:01&#43;08:00">
+        
+   27, 2018
+
+      </time>
+    
+    
+  
+  
+    <span></span>
+    
+      <a class="category-link" href="https://jianwenz.github.io/categories/python">Python</a>, 
+    
+      <a class="category-link" href="https://jianwenz.github.io/categories/django">Django</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h3 id="font-color-gray-django核心models-view-url-templte-font"><font color="gray">Django核心Models/View/URL/Templte</font></h3>
+
+<p>本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。<br />
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)</p>
+
+<h3 id="4-1-设计数据库模型-models">4.1 设计数据库模型(Models)</h3>
+
+<p>简单的说，Models在这里用来定义博客中各个部分，例如博客的标题、标签、正文、时间等等，数据库会按照Models定义的方式来存储这些字段。<br />
+<code>建议</code>结合第一章中的Django架构图来阅读，或更快帮助你理解Model这一概念。</p>
+
+<p><strong>创建Models</strong></p>
+
+<pre><code> vim mysite/blog/models.py
+
+from django.db import models
+
+# Create your models here.
+class BlogsPost(models.Model):
+    title = models.CharField(max_length = 150)                  # 博客标题，最大长度150
+    subtitle = models.CharField(max_length = 150,blank = True)  # 博客子标题      
+    category = models.CharField(max_length = 50, blank = True)  # 标签    
+    body = models.TextField(blank = True, null = True)          # 博客文章正文，TextField用于存储大量文本
+    timestamp = models.DateTimeField()                          # 博客时间
+
+    #python2使用__unicode__, python3使用__str__
+    def __str__(self) :
+        return self.title
+
+    class Meta:                                                #按时间下降排序
+        ordering = ['-timestamp']
+
+</code></pre>
+
+<p><strong>同步数据库</strong></p>
+
+<pre><code>$ python manage.py makemigrations
+$ python manage.py migrate
+</code></pre>
+
+<p>无报错说明配置正确。</p>
+
+<h3 id="4-2通过admin向数据库写入内容">4.2通过admin向数据库写入内容</h3>
+
+<p>在第二章中我们已经可以admin，但是你会发现并没有数据库信息的增加和删除, 需要编辑mysite/mysite/admin.py</p>
+
+<pre><code>vim mysite/mysite/admin.py
+
+from django.contrib import admin
+from blog.models import BlogsPost
+# Register your models here.
+class BlogsPostAdmin(admin.ModelAdmin):
+    list_display = ['title','subtitle','category', 'body', 'timestamp']
+
+admin.site.register(BlogsPost, BlogsPostAdmin)
+</code></pre>
+
+<p>这时打开http://[server_ip]/admin并登录，可以看到BlogPost如下图。
+<div align="center"><img src="http://media.jianwen.blog/7_1.png" width=70%></div></p>
+
+<p>点击BlogPost进入，发布一篇一些内容作为测试，如下图。
+<div align="center"><img src="http://media.jianwen.blog/7_2.png" width=70%></div></p>
+
+<p>提交成功后，这些内容已经被写入了数据库，你可以进入MySQL来进行验证</p>
+
+<pre><code># mysql
+MariaDB [(none)]&gt; use blog
+MariaDB [blog]&gt; select * from blog_blogspost;
+</code></pre>
+
+<p>你可以看到刚刚通过admin发布的内容。</p>
+
+<h3 id="4-3-编写view函数">4.3 编写view函数</h3>
+
+<pre><code>vim blog/views.py
+
+from django.shortcuts import render, get_object_or_404
+from blog.models import BlogsPost
+
+# Create your views here.
+def blog_index(request):
+    blog_list = BlogsPost.objects.all()  # 获取所有数据
+    return render(request,'index.html', {'blog_list':blog_list})   
+    # 返回index.html页面，index.html稍后在模板中定义
+</code></pre>
+
+<p><code>objects.all</code>从数据库里获取了全部的文章，.all方法返回的是一个 QuerySet，可以理解成一个类似于列表的数据结构。
+<code>render函数</code><br />
+我们首先把 HTTP 请求传了进去，然后 render 根据第二个参数的值 index.html 找到这个模板文件并读取模板中的内容。<br />
+{&lsquo;blog_list&rsquo;:blog_list},render函数把index.html模板中的变量blog_list替换为view中变量blog_list的值。</p>
+
+<h3 id="4-4-绑定url与view函数">4.4 绑定URL与view函数</h3>
+
+<pre><code>#vim mysite/mysite/url.py
+
+from django.contrib import admin
+from django.urls import path
+from blog import views
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.blog_index),
+]
+
+</code></pre>
+
+<h3 id="4-5-创建templates">4.5 创建templates</h3>
+
+<p><strong>创建templates文件夹</strong></p>
+
+<p>创建django项目时并没有生成templates文件夹，我们手动创建一个即可。</p>
+
+<pre><code>cd mysite/blog
+mkdir templates
+</code></pre>
+
+<p><strong>配置settings</strong></p>
+
+<p>需要告诉Django去哪里找模板，在settings.py文件里设置一下模板文件所在的路径。</p>
+
+<pre><code class="language-python">vim mysite/mysite/settings.py
+
+TEMPLATES = [
+    {
+...
+        'DIRS': [],      #这里就是模板的路径
+...
+    },
+]
+</code></pre>
+
+<p>我们在默认位置创建了templates文件夹，所以不需要更改setting中的模板路径设置。如果你在其他位置创建templates文件夹，可以在[]中写入 路径，类似<code>os.path.join(BASE_DIR, 'templates')</code>，<code>Base_DIR</code>是路径的变量。</p>
+
+<p><strong>创建模板</strong>
+设置完成后
+在templates文件见中，创建一个index.html</p>
+
+<pre><code>vim index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;/head&gt;
+    {% for blog in blog_list%}
+    &lt;p&gt;标题: {{blog.title}}&lt;/p&gt;
+    &lt;p&gt;子标题: {{blog.subtitle}}&lt;/p&gt;
+    &lt;p&gt;标签: {{blog.category}}&lt;/p&gt;
+    &lt;p&gt;时间: {{blog.timestamp}}&lt;/p&gt;
+    &lt;p&gt;正文: {{blog.body}}&lt;/p&gt;
+    {% endfor %}
+&lt;body&gt;
+&lt;h1&gt;{{ welcome }}&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><code>注意</code>：index.html 必须以<code>UTF-8</code>的编码格式保存，且小心不要往里面添加一些特殊字符，否则极有可能得到一个 UnicodeDecodeError 这样的错误。
+模板中使用了一个for循环，打印出所有文章。</p>
+
+<p><strong>重启HTTP服务</strong></p>
+
+<p>Django是有缓存的，配置改动以后最好重启http服务以确保生效。</p>
+
+<pre><code>service httpd restart
+</code></pre>
+
+<p><strong>访问博客首页</strong></p>
+
+<p>再次访问http://[server_ip]可以看到博客首页已经更新了，如下图：
+<div align="center"><img src="http://media.jianwen.blog/7_3.png" width=60%></div></p>
+
+<p>至此，Django博客的基本功能已经实现，但这样简陋页面肯定是无法使用的，接下来我们会优化前端功能。</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small"></span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://jianwenz.github.io/tags/python/">Python</a>
+
+  <a class="tag tag--primary tag--small" href="https://jianwenz.github.io/tags/django/">Django</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25/" data-tooltip="Django2.0搭建个人博客(5)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23/" data-tooltip="Django2.0搭建个人博客(3)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 Zhang Jianwen. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25/" data-tooltip="Django2.0搭建个人博客(5)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23/" data-tooltip="Django2.0搭建个人博客(3)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjianwenz.github.io%2F2018%2F06%2Fdjango2.0%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A24%2F">
+          <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fjianwenz.github.io%2F2018%2F06%2Fdjango2.0%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A24%2F">
+          <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fjianwenz.github.io%2F2018%2F06%2Fdjango2.0%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A24%2F">
+          <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://jianwenz.github.io/images/profile.jpg" alt="" />
+    
+    <h4 id="about-card-name">Zhang Jianwen</h4>
+    
+      <div id="about-card-bio">Life is short, so enjoy it to the fullest.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        System Architect
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Beijing
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2019/03/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                <h3 class="media-heading">Hugo搭建个人博客</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/07/centos7%E9%83%A8%E7%BD%B2kubernetes%E9%9B%86%E7%BE%A4/">
+                <h3 class="media-heading">Centos7部署Kubernetes集群</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>运行Nginx服务和k8s Dashboard</p>
+
+<p>之前介绍了Kubernetes的架构与核心概念, 现在搭建一个kubernetes集群的环境, 目标是能通过k8s运行Nginx服务和k8s的Dashbord, 借此来进一步理解和熟悉k8s的原理.</p>
+
+<p>这里我为了方便, 使用境外服务器搭建测试环境.</p>
+
+<p>由于docker官方镜像仓库在海外, 如果服务器在国内请自行搭建梯子, 否则拉取docker镜像时会失败.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/07/kubernetes%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                <h3 class="media-heading">Kubernetes核心概念</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="1-基础架构">1.基础架构</h3>
+
+<div align="center"><img src="http://media.jianwen.blog/11_1.png" width = 10%></div>
+
+<h5 id="1-1-master">1.1 Master</h5>
+
+<p>&emsp;&emsp;Master节点上面主要由四个模块组成：APIServer、scheduler、controller manager、etcd。</p>
+
+<p>&emsp;&emsp;<code>APIServer</code>，APIServer负责对外提供RESTful的Kubernetes API服务，它是系统管理指令的统一入口，任何对资源进行增删改查的操作都要交给APIServer处理后再提交给etcd。如架构图中所示，kubectl（Kubernetes提供的客户端工具，该工具内部就是对Kubernetes API的调用）是直接和APIServer交互的。</p>
+
+<p>&emsp;&emsp;<code>Scheduler</code>，scheduler的职责很明确，就是负责调度pod到合适的Node上。如果把scheduler看成一个黑匣子，那么它的输入是pod和由多个Node组成的列表，输出是Pod和一个Node的绑定，即将这个pod部署到这个Node上。Kubernetes目前提供了调度算法，但是同样也保留了接口，用户可以根据自己的需求定义自己的调度算法。</p>
+
+<p>&emsp;&emsp;<code>controller manager</code>，如果说APIServer做的是“前台”的工作的话，那controller manager就是负责“后台”的。每个资源一般都对应有一个控制器，而controller manager就是负责管理这些控制器的。比如我们通过APIServer创建一个pod，当这个pod创建成功后，APIServer的任务就算完成了。而后面保证Pod的状态始终和我们预期的一样的重任就由controller manager去保证了。</p>
+
+<p>&emsp;&emsp;<code>etcd</code>，etcd是一个高可用的键值存储系统，Kubernetes使用它来存储各个资源的状态，从而实现了Restful的API。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25/">
+                <h3 class="media-heading">Django2.0搭建个人博客(5)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="font-color-gray-设计博客首页和详情页-font"><font color="gray">设计博客首页和详情页</font></h3>
+
+<p>本章的blog主要包含了两个页面：</p>
+
+<ul>
+<li><code>首页</code><br />
+展示所有博文的标题、预览等等。</li>
+<li><code>详情页</code><br />
+详细展示某一篇博的内容，还可以包含评论、回复统计等等功能。</li>
+</ul>
+
+<p>当然你还可以根据自己需要设计其他页面，实现思路都是类似的。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/">
+                <h3 class="media-heading">Django2.0搭建个人博客(4)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="font-color-gray-django核心models-view-url-templte-font"><font color="gray">Django核心Models/View/URL/Templte</font></h3>
+
+<p>本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。<br />
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23/">
+                <h3 class="media-heading">Django2.0搭建个人博客(3)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="font-color-gray-为django部署apache和mysql-font"><font color="gray">为Django部署Apache和MySQL</font></h3>
+
+<p>虽然django自带了web服务和数据库sqlite，但无论是功能还是性能肯定是无法满足正式发布的需要。<br />
+所以这里我们使用Apache和MySQL作为web服务器和数据库。<br />
+<code>注意</code>前方大量天坑。可能你使用的系统、软件、中间键的版本与本教程存在差异，部署时失败是非常常见的，注意从错误日志寻找问题。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22/">
+                <h3 class="media-heading">Django2.0搭建个人博客(2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="font-color-gray-创建项目和blog应用-设置admin-font"><font color="gray">创建项目和Blog应用，设置Admin</font></h3>
+
+<h3 id="2-1安装python3-4-pip3和django">2.1安装Python3.4/pip3和Django</h3>
+
+<p>请参阅 <a href="http://jianwen.blog/post/1/">使用eple源安装Pyhton3.4和pip3</a>来安装python3和pip，然后使用pip安装Django.</p>
+
+<pre><code class="language-bash">#安装最新版本的Django
+$ pip install  django
+#或者指定安装版本
+pip install -v django==2.0.6
+</code></pre></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21/">
+                <h3 class="media-heading">Django2.0搭建个人博客(1)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="font-color-gray-django的基本架构-font"><font color="gray">Django的基本架构</font></h3>
+
+<p>本教程详细记录CentOS下使用Django2.0的博客搭建步骤。<br />
+如果只是以搭建一个博客并维护内容为目的，在网上可以找到很多免费博客平台，也可以使用Github+Hugo/Hexo来搭建一个免费的静态博客。</p>
+
+<p>采用独立服务器上使用Django搭建主要出于以下考虑：</p>
+
+<ul>
+<li>加深理解Django和Python</li>
+<li>记录实践过程遇到的技术问题，提升自己也帮助其他人</li>
+</ul></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/05/centos%E4%BD%BF%E7%94%A8eple%E6%BA%90%E5%AE%89%E8%A3%85pyhton3.4%E5%92%8Cpip3/">
+                <h3 class="media-heading">CentOS使用eple源安装Pyhton3.4和pip3</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Centos系统中自带的Python2.x，如果希望在centos上使用Python3则需要安装。最简便的<code>Python3</code>安装方法是使用<code>eple</code>源通过<code>yum</code>命令。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         9 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://jianwenz.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://jianwenz.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/jianwenz.github.io\/2018\/06\/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24\/';
+          
+            this.page.identifier = '\/2018\/06\/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

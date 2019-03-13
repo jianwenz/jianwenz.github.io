@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/categories/python/</link>
+    <description>Recent content in Python on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jun 2018 15:18:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django2.0搭建个人博客(5)</title>
+      <link>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25/</link>
+      <pubDate>Thu, 28 Jun 2018 15:18:01 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25/</guid>
+      <description>&lt;h3 id=&#34;font-color-gray-设计博客首页和详情页-font&#34;&gt;&lt;font color=&#34;gray&#34;&gt;设计博客首页和详情页&lt;/font&gt;&lt;/h3&gt;
+
+&lt;p&gt;本章的blog主要包含了两个页面：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;首页&lt;/code&gt;&lt;br /&gt;
+展示所有博文的标题、预览等等。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;详情页&lt;/code&gt;&lt;br /&gt;
+详细展示某一篇博的内容，还可以包含评论、回复统计等等功能。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当然你还可以根据自己需要设计其他页面，实现思路都是类似的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django2.0搭建个人博客(4)</title>
+      <link>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/</link>
+      <pubDate>Wed, 27 Jun 2018 15:18:01 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24/</guid>
+      <description>&lt;h3 id=&#34;font-color-gray-django核心models-view-url-templte-font&#34;&gt;&lt;font color=&#34;gray&#34;&gt;Django核心Models/View/URL/Templte&lt;/font&gt;&lt;/h3&gt;
+
+&lt;p&gt;本章models/view/url/templates是是Django的核心部分，阅读是请结合第一章的Django架构来理解。&lt;br /&gt;
+models
+url设置相当于客户端向服务器发出request请求的入口, 并用来指明要调用的程序逻辑
+views用来处理程序逻辑, 然后呈现到template(一般为GET方法, POST方法略有不同)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django2.0搭建个人博客(3)</title>
+      <link>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23/</link>
+      <pubDate>Tue, 26 Jun 2018 15:18:01 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23/</guid>
+      <description>&lt;h3 id=&#34;font-color-gray-为django部署apache和mysql-font&#34;&gt;&lt;font color=&#34;gray&#34;&gt;为Django部署Apache和MySQL&lt;/font&gt;&lt;/h3&gt;
+
+&lt;p&gt;虽然django自带了web服务和数据库sqlite，但无论是功能还是性能肯定是无法满足正式发布的需要。&lt;br /&gt;
+所以这里我们使用Apache和MySQL作为web服务器和数据库。&lt;br /&gt;
+&lt;code&gt;注意&lt;/code&gt;前方大量天坑。可能你使用的系统、软件、中间键的版本与本教程存在差异，部署时失败是非常常见的，注意从错误日志寻找问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django2.0搭建个人博客(2)</title>
+      <link>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22/</link>
+      <pubDate>Sun, 24 Jun 2018 15:17:58 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22/</guid>
+      <description>&lt;h3 id=&#34;font-color-gray-创建项目和blog应用-设置admin-font&#34;&gt;&lt;font color=&#34;gray&#34;&gt;创建项目和Blog应用，设置Admin&lt;/font&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;2-1安装python3-4-pip3和django&#34;&gt;2.1安装Python3.4/pip3和Django&lt;/h3&gt;
+
+&lt;p&gt;请参阅 &lt;a href=&#34;http://jianwen.blog/post/1/&#34;&gt;使用eple源安装Pyhton3.4和pip3&lt;/a&gt;来安装python3和pip，然后使用pip安装Django.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#安装最新版本的Django
+$ pip install  django
+#或者指定安装版本
+pip install -v django==2.0.6
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Django2.0搭建个人博客(1)</title>
+      <link>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21/</link>
+      <pubDate>Sat, 02 Jun 2018 11:04:16 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/06/django2.0%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21/</guid>
+      <description>&lt;h3 id=&#34;font-color-gray-django的基本架构-font&#34;&gt;&lt;font color=&#34;gray&#34;&gt;Django的基本架构&lt;/font&gt;&lt;/h3&gt;
+
+&lt;p&gt;本教程详细记录CentOS下使用Django2.0的博客搭建步骤。&lt;br /&gt;
+如果只是以搭建一个博客并维护内容为目的，在网上可以找到很多免费博客平台，也可以使用Github+Hugo/Hexo来搭建一个免费的静态博客。&lt;/p&gt;
+
+&lt;p&gt;采用独立服务器上使用Django搭建主要出于以下考虑：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;加深理解Django和Python&lt;/li&gt;
+&lt;li&gt;记录实践过程遇到的技术问题，提升自己也帮助其他人&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>CentOS使用eple源安装Pyhton3.4和pip3</title>
+      <link>https://jianwenz.github.io/2018/05/centos%E4%BD%BF%E7%94%A8eple%E6%BA%90%E5%AE%89%E8%A3%85pyhton3.4%E5%92%8Cpip3/</link>
+      <pubDate>Tue, 29 May 2018 11:04:16 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/05/centos%E4%BD%BF%E7%94%A8eple%E6%BA%90%E5%AE%89%E8%A3%85pyhton3.4%E5%92%8Cpip3/</guid>
+      <description>&lt;p&gt;Centos系统中自带的Python2.x，如果希望在centos上使用Python3则需要安装。最简便的&lt;code&gt;Python3&lt;/code&gt;安装方法是使用&lt;code&gt;eple&lt;/code&gt;源通过&lt;code&gt;yum&lt;/code&gt;命令。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/categories/hugo/</link>
+    <description>Recent content in Hugo on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Mar 2019 11:04:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo搭建个人博客</title>
+      <link>https://jianwenz.github.io/2019/03/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 08 Mar 2019 11:04:16 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2019/03/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
