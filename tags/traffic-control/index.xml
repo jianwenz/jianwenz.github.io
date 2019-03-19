@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Traffic Control on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/traffic-control/</link>
+    <description>Recent content in Traffic Control on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Sep 2018 11:07:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/traffic-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux TC</title>
+      <link>https://jianwenz.github.io/2018/09/linux-tc/</link>
+      <pubDate>Sun, 16 Sep 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/linux-tc/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/yxwkf/p/5424383.html&#34;&gt;https://www.cnblogs.com/yxwkf/p/5424383.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我们只说端口限速。&lt;/p&gt;
+
+&lt;p&gt;演示的外网的网卡是 eth0 。&lt;/p&gt;
+
+&lt;p&gt;执行以下命令，请替换你自己的外网网卡名称。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

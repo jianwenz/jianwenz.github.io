@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sdn on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/sdn/</link>
+    <description>Recent content in Sdn on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Nov 2018 16:55:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/sdn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>openvswitch详解</title>
+      <link>https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 12 Nov 2018 16:55:53 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;h3 id=&#34;open-vswitch介绍&#34;&gt;Open vSwitch介绍&lt;/h3&gt;
+
+&lt;p&gt;在过去，数据中心的服务器是直接连在硬件交换机上，后来VMware实现了服务器虚拟化技术，使虚拟服务器(VMs)能够连接在虚拟交换机上，借助这个虚拟交换机，可以为服务器上运行的VMs或容器提供逻辑的虚拟的以太网接口，这些逻辑接口都连接到虚拟交换机上，有三种比较流行的虚拟交换机: VMware virtual switch, Cisco Nexus 1000V,和Open vSwitch&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用frp实现反向穿透</title>
+      <link>https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Thu, 18 Oct 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>&lt;p&gt;目前个人认为配置和使用上是最方便的内网穿透工具，已经用了快两年了，拿来穿透进没有公网的位于学校宿舍的服务器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux TC</title>
+      <link>https://jianwenz.github.io/2018/09/linux-tc/</link>
+      <pubDate>Sun, 16 Sep 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/linux-tc/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/yxwkf/p/5424383.html&#34;&gt;https://www.cnblogs.com/yxwkf/p/5424383.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我们只说端口限速。&lt;/p&gt;
+
+&lt;p&gt;演示的外网的网卡是 eth0 。&lt;/p&gt;
+
+&lt;p&gt;执行以下命令，请替换你自己的外网网卡名称。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux虚拟网络设备 tun/tap/veth/bridge</title>
+      <link>https://jianwenz.github.io/2018/09/linux%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87-tun/tap/veth/bridge/</link>
+      <pubDate>Sat, 15 Sep 2018 11:16:35 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/linux%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87-tun/tap/veth/bridge/</guid>
+      <description>https://segmentfault.com/a/1190000009249039
+https://segmentfault.com/a/1190000009491002</description>
+    </item>
+    
+    <item>
+      <title>VxLAN</title>
+      <link>https://jianwenz.github.io/2018/08/vxlan/</link>
+      <pubDate>Thu, 02 Aug 2018 11:47:03 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/08/vxlan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Macvlan,Calico和Flannel</title>
+      <link>https://jianwenz.github.io/2018/07/macvlancalico%E5%92%8Cflannel/</link>
+      <pubDate>Tue, 31 Jul 2018 11:08:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/macvlancalico%E5%92%8Cflannel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptables详解及一些常用规则</title>
+      <link>https://jianwenz.github.io/2018/07/iptables%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%A7%84%E5%88%99/</link>
+      <pubDate>Tue, 31 Jul 2018 10:39:14 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/iptables%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%A7%84%E5%88%99/</guid>
+      <description>&lt;h3 id=&#34;1-iptables简介&#34;&gt;&lt;strong&gt;1. iptables简介&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;netfilter/iptables（简称为iptables）组成Linux平台下的包过滤防火墙，与大多数的Linux软件一样，这个包过滤防火墙是免费的，它可以代替昂贵的商业防火墙解决方案，完成封包过滤、封包重定向和网络地址转换（NAT）等功能。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

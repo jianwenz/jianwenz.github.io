@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iptables on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/iptables/</link>
+    <description>Recent content in Iptables on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Feb 2019 11:31:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DNS Rewrite(污染)实现</title>
+      <link>https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Tue, 26 Feb 2019 11:31:25 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;p&gt;需要屏蔽掉一些域名，&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iptables详解及一些常用规则</title>
+      <link>https://jianwenz.github.io/2018/07/iptables%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%A7%84%E5%88%99/</link>
+      <pubDate>Tue, 31 Jul 2018 10:39:14 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/iptables%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%A7%84%E5%88%99/</guid>
+      <description>&lt;h3 id=&#34;1-iptables简介&#34;&gt;&lt;strong&gt;1. iptables简介&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;netfilter/iptables（简称为iptables）组成Linux平台下的包过滤防火墙，与大多数的Linux软件一样，这个包过滤防火墙是免费的，它可以代替昂贵的商业防火墙解决方案，完成封包过滤、封包重定向和网络地址转换（NAT）等功能。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

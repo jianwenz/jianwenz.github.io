@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.54.0 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Zhang Jianwen">
+<meta name="keywords" content="">
+<meta name="description" content="Hugo tranquilpeak theme demo">
+
+
+<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ovs">
+<meta name="twitter:title" content="Ovs">
+<meta property="og:url" content="https://jianwenz.github.io/tags/ovs/">
+<meta property="twitter:url" content="https://jianwenz.github.io/tags/ovs/">
+<meta property="og:site_name" content="Jianwen&#39;s Blog">
+<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta name="twitter:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://jianwenz.github.io/images/profile.jpg">
+  <meta property="twitter:image" content="https://jianwenz.github.io/images/profile.jpg">
+
+
+    <title>Ovs</title>
+
+    <link rel="icon" href="https://jianwenz.github.io/images/favicon.ico">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://jianwenz.github.io/tags/ovs/index.xml">
+    
+
+    
+
+    <link rel="canonical" href="https://jianwenz.github.io/tags/ovs/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://jianwenz.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://jianwenz.github.io/">Jianwen&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://jianwenz.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://jianwenz.github.io/images/profile.jpg" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://jianwenz.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://jianwenz.github.io/images/profile.jpg" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Zhang Jianwen</h4>
+        
+          <h5 class="sidebar-profile-bio">Life is short, so enjoy it to the fullest.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jianwenz.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/jianwenz" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+        
+
+      
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/">
+          openvswitch详解
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-11-12T16:55:53&#43;08:00">
+        
+  
+  
+  
+  
+    Jun 12, 2018.
+  
+
+      </time>
+    
+    
+  
+  
+    <span></span>
+    
+      <a class="category-link" href="https://jianwenz.github.io/categories/sdn">SDN</a>, 
+    
+      <a class="category-link" href="https://jianwenz.github.io/categories/ovs">OVS</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h3 id="open-vswitch介绍">Open vSwitch介绍</h3>
+
+<p>在过去，数据中心的服务器是直接连在硬件交换机上，后来VMware实现了服务器虚拟化技术，使虚拟服务器(VMs)能够连接在虚拟交换机上，借助这个虚拟交换机，可以为服务器上运行的VMs或容器提供逻辑的虚拟的以太网接口，这些逻辑接口都连接到虚拟交换机上，有三种比较流行的虚拟交换机: VMware virtual switch, Cisco Nexus 1000V,和Open vSwitch</p>
+      
+      <p>
+        <a href="https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/" class="postShorten-excerpt_link link"></a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+            
+
+          </section>
+        
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 Zhang Jianwen. 
+  </span>
+</footer>
+
+      </div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://jianwenz.github.io/images/profile.jpg" alt="" />
+    
+    <h4 id="about-card-name">Zhang Jianwen</h4>
+    
+      <div id="about-card-bio">Life is short, so enjoy it to the fullest.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        System Architect
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Beijing
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2019/03/vue_bootstrap/">
+                <h3 class="media-heading">Vue_bootstrap</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2019/03/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                <h3 class="media-heading">Hugo搭建个人博客</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/">
+                <h3 class="media-heading">DNS Rewrite(污染)实现</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>需要屏蔽掉一些域名，</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/12/mysql-5.7%E5%AE%98%E6%96%B9docker%E9%95%9C%E5%83%8F%E5%88%86%E6%9E%90/">
+                <h3 class="media-heading">MySQL 5.7官方docker镜像分析</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Docker官方的Mysql镜像的Dockerfile托管在Github上，地址如下：</p>
+
+<p><a href="https://github.com/docker-library/mysql/tree/5836bc9af9deb67b68c32bebad09a0f7513da36e/5.6">https://github.com/docker-library/mysql/tree/5836bc9af9deb67b68c32bebad09a0f7513da36e/5.6</a></p>
+
+<p>仔细研究了一下其Dockerfile，发现最有技术含量的倒不是其Dockerfile本身，无非是更新软件仓库，下载Mysql Server，稍微修改一下其配置文件。</p>
+
+<p>倒是ENTRYPOINT对应的docker-entrypoint.sh很耐人寻味，这个文件相当详实，涉及了Mysql如何初始化，如何设置密码，如何启动服务等关键问题。</p>
+
+<p>今天花费了大半天来分析这个脚本，果然是受益匪浅。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/">
+                <h3 class="media-heading">openvswitch详解</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h3 id="open-vswitch介绍">Open vSwitch介绍</h3>
+
+<p>在过去，数据中心的服务器是直接连在硬件交换机上，后来VMware实现了服务器虚拟化技术，使虚拟服务器(VMs)能够连接在虚拟交换机上，借助这个虚拟交换机，可以为服务器上运行的VMs或容器提供逻辑的虚拟的以太网接口，这些逻辑接口都连接到虚拟交换机上，有三种比较流行的虚拟交换机: VMware virtual switch, Cisco Nexus 1000V,和Open vSwitch</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/">
+                <h3 class="media-heading">使用frp实现反向穿透</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>目前个人认为配置和使用上是最方便的内网穿透工具，已经用了快两年了，拿来穿透进没有公网的位于学校宿舍的服务器</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/10/openvpn%E5%AE%B9%E5%99%A8%E5%8C%96%E9%85%8D%E7%BD%AE/">
+                <h3 class="media-heading">openvpn容器化配置</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>如果部署过openvpn，应该知道过程有多么复杂和痛苦。</p>
+
+<p>使用docker镜像来部署openvpn会简单很多。</p>
+
+<p>主要配置如下：</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/09/squid%E5%88%B0mysql%E8%AE%A4%E8%AF%81/">
+                <h3 class="media-heading">squid到mysql认证</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>squid极其强大和稳定，需要squid和mysql认证，发现相关资料甚少，稍微研究一下</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/09/kubernetes-yaml%E8%AF%A6%E8%A7%A3/">
+                <h3 class="media-heading">Kubernetes YAML详解</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Kubernetes YAML编排文件详解</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://jianwenz.github.io/2018/09/linux-tc/">
+                <h3 class="media-heading">Linux TC</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><a href="https://www.cnblogs.com/yxwkf/p/5424383.html">https://www.cnblogs.com/yxwkf/p/5424383.html</a></p>
+
+<p>我们只说端口限速。</p>
+
+<p>演示的外网的网卡是 eth0 。</p>
+
+<p>执行以下命令，请替换你自己的外网网卡名称。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         30 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://jianwenz.github.io/images/cover2.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://jianwenz.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+
+    
+  </body>
+</html>
+

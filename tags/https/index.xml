@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Https on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/https/</link>
+    <description>Recent content in Https on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Aug 2018 20:13:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Let&#39;s Encrypt 通配符证书申请和部署</title>
+      <link>https://jianwenz.github.io/2018/08/lets-encrypt-%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E5%92%8C%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 15 Aug 2018 20:13:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/08/lets-encrypt-%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E5%92%8C%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;p&gt;&amp;emsp;&amp;emsp;在自己部署的HTTPS服务中需要使用证书，对于小型网站最好就是免费的证书。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;最早使用过国内WoSign的免费证书，不过CA的各种zuo，证书很早就不再被各个浏览器信任了；后来用了阿里云提供的免费Symentec证书，不过到2018年11月以后Chrome也不再信任Symentec了。。。感觉什么东西一道国内信任度就直线下降。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;权衡之下转到了Let&amp;rsquo;s Encrypt免费的SSL证书，并且在今年Let&amp;rsquo;s Encrypt可以支持通配符证书了（以前给每个hostname申请证书真是苦啊。。。一不小心就丢掉一个）。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;Let&amp;rsquo;s Encrypt的免费证书最大问题就是有效期只有3个月，所以要每3个月更新一次（是不是很bt&amp;hellip;），不过好消息是可以供acme来部署Let&amp;rsquo;s Encrypt证书并自动更新。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

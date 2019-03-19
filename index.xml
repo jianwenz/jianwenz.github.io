@@ -6,10 +6,19 @@
     <description>Recent content on Jianwen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2019 11:04:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Mar 2019 11:08:50 +0800</lastBuildDate>
     
 	<atom:link href="https://jianwenz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue_bootstrap</title>
+      <link>https://jianwenz.github.io/2019/03/vue_bootstrap/</link>
+      <pubDate>Tue, 19 Mar 2019 11:08:50 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2019/03/vue_bootstrap/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo搭建个人博客</title>
@@ -18,6 +27,224 @@
       
       <guid>https://jianwenz.github.io/2019/03/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;Hugo是一个用Go编写的静态站点生成器，由于具有丰富的主题资源和惊人的生成速度而备受青睐。本博客即是基于Hugo搭建，下面讲述一下我的建站历程以及踩的几个大坑（此处手动Doge…）。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DNS Rewrite(污染)实现</title>
+      <link>https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Tue, 26 Feb 2019 11:31:25 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;p&gt;需要屏蔽掉一些域名，&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MySQL 5.7官方docker镜像分析</title>
+      <link>https://jianwenz.github.io/2018/12/mysql-5.7%E5%AE%98%E6%96%B9docker%E9%95%9C%E5%83%8F%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 21 Dec 2018 11:46:01 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/12/mysql-5.7%E5%AE%98%E6%96%B9docker%E9%95%9C%E5%83%8F%E5%88%86%E6%9E%90/</guid>
+      <description>&lt;p&gt;Docker官方的Mysql镜像的Dockerfile托管在Github上，地址如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker-library/mysql/tree/5836bc9af9deb67b68c32bebad09a0f7513da36e/5.6&#34;&gt;https://github.com/docker-library/mysql/tree/5836bc9af9deb67b68c32bebad09a0f7513da36e/5.6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;仔细研究了一下其Dockerfile，发现最有技术含量的倒不是其Dockerfile本身，无非是更新软件仓库，下载Mysql Server，稍微修改一下其配置文件。&lt;/p&gt;
+
+&lt;p&gt;倒是ENTRYPOINT对应的docker-entrypoint.sh很耐人寻味，这个文件相当详实，涉及了Mysql如何初始化，如何设置密码，如何启动服务等关键问题。&lt;/p&gt;
+
+&lt;p&gt;今天花费了大半天来分析这个脚本，果然是受益匪浅。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>openvswitch详解</title>
+      <link>https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 12 Nov 2018 16:55:53 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;h3 id=&#34;open-vswitch介绍&#34;&gt;Open vSwitch介绍&lt;/h3&gt;
+
+&lt;p&gt;在过去，数据中心的服务器是直接连在硬件交换机上，后来VMware实现了服务器虚拟化技术，使虚拟服务器(VMs)能够连接在虚拟交换机上，借助这个虚拟交换机，可以为服务器上运行的VMs或容器提供逻辑的虚拟的以太网接口，这些逻辑接口都连接到虚拟交换机上，有三种比较流行的虚拟交换机: VMware virtual switch, Cisco Nexus 1000V,和Open vSwitch&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用frp实现反向穿透</title>
+      <link>https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Thu, 18 Oct 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>&lt;p&gt;目前个人认为配置和使用上是最方便的内网穿透工具，已经用了快两年了，拿来穿透进没有公网的位于学校宿舍的服务器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>openvpn容器化配置</title>
+      <link>https://jianwenz.github.io/2018/10/openvpn%E5%AE%B9%E5%99%A8%E5%8C%96%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 05 Oct 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/10/openvpn%E5%AE%B9%E5%99%A8%E5%8C%96%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;如果部署过openvpn，应该知道过程有多么复杂和痛苦。&lt;/p&gt;
+
+&lt;p&gt;使用docker镜像来部署openvpn会简单很多。&lt;/p&gt;
+
+&lt;p&gt;主要配置如下：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>squid到mysql认证</title>
+      <link>https://jianwenz.github.io/2018/09/squid%E5%88%B0mysql%E8%AE%A4%E8%AF%81/</link>
+      <pubDate>Fri, 28 Sep 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/squid%E5%88%B0mysql%E8%AE%A4%E8%AF%81/</guid>
+      <description>&lt;p&gt;squid极其强大和稳定，需要squid和mysql认证，发现相关资料甚少，稍微研究一下&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes YAML详解</title>
+      <link>https://jianwenz.github.io/2018/09/kubernetes-yaml%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 23 Sep 2018 15:38:42 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/kubernetes-yaml%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;p&gt;Kubernetes YAML编排文件详解&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux TC</title>
+      <link>https://jianwenz.github.io/2018/09/linux-tc/</link>
+      <pubDate>Sun, 16 Sep 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/linux-tc/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/yxwkf/p/5424383.html&#34;&gt;https://www.cnblogs.com/yxwkf/p/5424383.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我们只说端口限速。&lt;/p&gt;
+
+&lt;p&gt;演示的外网的网卡是 eth0 。&lt;/p&gt;
+
+&lt;p&gt;执行以下命令，请替换你自己的外网网卡名称。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux虚拟网络设备 tun/tap/veth/bridge</title>
+      <link>https://jianwenz.github.io/2018/09/linux%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87-tun/tap/veth/bridge/</link>
+      <pubDate>Sat, 15 Sep 2018 11:16:35 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/linux%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87-tun/tap/veth/bridge/</guid>
+      <description>https://segmentfault.com/a/1190000009249039
+https://segmentfault.com/a/1190000009491002</description>
+    </item>
+    
+    <item>
+      <title>Docker存储驱动devicemapper</title>
+      <link>https://jianwenz.github.io/2018/09/docker%E5%AD%98%E5%82%A8%E9%A9%B1%E5%8A%A8devicemapper/</link>
+      <pubDate>Sun, 02 Sep 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/docker%E5%AD%98%E5%82%A8%E9%A9%B1%E5%8A%A8devicemapper/</guid>
+      <description>http://www.dockerinfo.net/2182.html https://baijiahao.baidu.com/s?id=1595897858633228259&amp;amp;wfr=spider&amp;amp;for=pc
+深入理解overlayfs</description>
+    </item>
+    
+    <item>
+      <title>ETCD架构与实现解析</title>
+      <link>https://jianwenz.github.io/2018/09/etcd%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Sat, 01 Sep 2018 12:48:13 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/etcd%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%A7%A3%E6%9E%90/</guid>
+      <description>&lt;p&gt;前一段时间的项目里用到了 Etcd（&lt;a href=&#34;http://jolestar.com/etcd-architecture），&#34;&gt;http://jolestar.com/etcd-architecture），&lt;/a&gt; 所以研究了一下它的源码以及实现。&lt;/p&gt;
+
+&lt;p&gt;网上关于 Etcd 的使用介绍的文章不少，但分析具体架构实现的文章不多，同时 Etcd v3的文档也非常稀缺。&lt;/p&gt;
+
+&lt;p&gt;本文通过分析 Etcd 的架构与实现，了解其优缺点以及瓶颈点，一方面可以学习分布式系统的架构，另外一方面也可以保证在业务中正确使用 Etcd，知其然同时知其所以然，避免误用。&lt;/p&gt;
+
+&lt;p&gt;最后介绍 Etcd 周边的工具和一些使用注意事项。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Curl和Wget</title>
+      <link>https://jianwenz.github.io/2018/08/curl%E5%92%8Cwget/</link>
+      <pubDate>Tue, 28 Aug 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/08/curl%E5%92%8Cwget/</guid>
+      <description>&lt;p&gt;curl和wget基础功能有诸多重叠，如下载等。&lt;/p&gt;
+
+&lt;p&gt;在高级用途上的curl由于可自定义各种请求参数所以长于模拟web请求，用于测试网页交互（浏览器）；wget由于支持ftp和Recursive所以长于下载，用于下载文件（迅雷）。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Encrypt 通配符证书申请和部署</title>
+      <link>https://jianwenz.github.io/2018/08/lets-encrypt-%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E5%92%8C%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 15 Aug 2018 20:13:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/08/lets-encrypt-%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E5%92%8C%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;p&gt;&amp;emsp;&amp;emsp;在自己部署的HTTPS服务中需要使用证书，对于小型网站最好就是免费的证书。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;最早使用过国内WoSign的免费证书，不过CA的各种zuo，证书很早就不再被各个浏览器信任了；后来用了阿里云提供的免费Symentec证书，不过到2018年11月以后Chrome也不再信任Symentec了。。。感觉什么东西一道国内信任度就直线下降。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;权衡之下转到了Let&amp;rsquo;s Encrypt免费的SSL证书，并且在今年Let&amp;rsquo;s Encrypt可以支持通配符证书了（以前给每个hostname申请证书真是苦啊。。。一不小心就丢掉一个）。&lt;/p&gt;
+
+&lt;p&gt;&amp;emsp;&amp;emsp;Let&amp;rsquo;s Encrypt的免费证书最大问题就是有效期只有3个月，所以要每3个月更新一次（是不是很bt&amp;hellip;），不过好消息是可以供acme来部署Let&amp;rsquo;s Encrypt证书并自动更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VxLAN</title>
+      <link>https://jianwenz.github.io/2018/08/vxlan/</link>
+      <pubDate>Thu, 02 Aug 2018 11:47:03 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/08/vxlan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Macvlan,Calico和Flannel</title>
+      <link>https://jianwenz.github.io/2018/07/macvlancalico%E5%92%8Cflannel/</link>
+      <pubDate>Tue, 31 Jul 2018 11:08:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/macvlancalico%E5%92%8Cflannel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptables详解及一些常用规则</title>
+      <link>https://jianwenz.github.io/2018/07/iptables%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%A7%84%E5%88%99/</link>
+      <pubDate>Tue, 31 Jul 2018 10:39:14 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/iptables%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E8%A7%84%E5%88%99/</guid>
+      <description>&lt;h3 id=&#34;1-iptables简介&#34;&gt;&lt;strong&gt;1. iptables简介&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;netfilter/iptables（简称为iptables）组成Linux平台下的包过滤防火墙，与大多数的Linux软件一样，这个包过滤防火墙是免费的，它可以代替昂贵的商业防火墙解决方案，完成封包过滤、封包重定向和网络地址转换（NAT）等功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nginx原理和调优</title>
+      <link>https://jianwenz.github.io/2018/07/nginx%E5%8E%9F%E7%90%86%E5%92%8C%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Sat, 28 Jul 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/nginx%E5%8E%9F%E7%90%86%E5%92%8C%E8%B0%83%E4%BC%98/</guid>
+      <description>&lt;p&gt;nginx原理&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>部署Kubernetes本地镜像仓库</title>
+      <link>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 28 Jul 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</guid>
+      <description>https://www.cnblogs.com/zhenyuyaodidiao/p/6500950.html</description>
+    </item>
+    
+    <item>
+      <title>部署Kubernetes本地镜像仓库</title>
+      <link>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 28 Jul 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</guid>
+      <description>https://www.cnblogs.com/zhenyuyaodidiao/p/6500950.html</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes负载均衡详解</title>
+      <link>https://jianwenz.github.io/2018/07/kubernetes%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sat, 14 Jul 2018 11:06:00 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/kubernetes%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;p&gt;未完成&lt;/p&gt;</description>
     </item>
     
     <item>

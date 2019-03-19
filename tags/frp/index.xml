@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frp on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/frp/</link>
+    <description>Recent content in Frp on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Oct 2018 11:07:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/frp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用frp实现反向穿透</title>
+      <link>https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Thu, 18 Oct 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/10/%E4%BD%BF%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>&lt;p&gt;目前个人认为配置和使用上是最方便的内网穿透工具，已经用了快两年了，拿来穿透进没有公网的位于学校宿舍的服务器&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

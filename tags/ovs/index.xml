@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ovs on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/ovs/</link>
+    <description>Recent content in Ovs on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Nov 2018 16:55:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/ovs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>openvswitch详解</title>
+      <link>https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 12 Nov 2018 16:55:53 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/11/openvswitch%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;h3 id=&#34;open-vswitch介绍&#34;&gt;Open vSwitch介绍&lt;/h3&gt;
+
+&lt;p&gt;在过去，数据中心的服务器是直接连在硬件交换机上，后来VMware实现了服务器虚拟化技术，使虚拟服务器(VMs)能够连接在虚拟交换机上，借助这个虚拟交换机，可以为服务器上运行的VMs或容器提供逻辑的虚拟的以太网接口，这些逻辑接口都连接到虚拟交换机上，有三种比较流行的虚拟交换机: VMware virtual switch, Cisco Nexus 1000V,和Open vSwitch&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,89 @@
     <description>Recent content in Kubernetes on Jianwen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Jul 2018 11:04:16 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Sep 2018 15:38:42 +0800</lastBuildDate>
     
 	<atom:link href="https://jianwenz.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes YAML详解</title>
+      <link>https://jianwenz.github.io/2018/09/kubernetes-yaml%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 23 Sep 2018 15:38:42 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/kubernetes-yaml%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;p&gt;Kubernetes YAML编排文件详解&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker存储驱动devicemapper</title>
+      <link>https://jianwenz.github.io/2018/09/docker%E5%AD%98%E5%82%A8%E9%A9%B1%E5%8A%A8devicemapper/</link>
+      <pubDate>Sun, 02 Sep 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/docker%E5%AD%98%E5%82%A8%E9%A9%B1%E5%8A%A8devicemapper/</guid>
+      <description>http://www.dockerinfo.net/2182.html https://baijiahao.baidu.com/s?id=1595897858633228259&amp;amp;wfr=spider&amp;amp;for=pc
+深入理解overlayfs</description>
+    </item>
+    
+    <item>
+      <title>ETCD架构与实现解析</title>
+      <link>https://jianwenz.github.io/2018/09/etcd%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Sat, 01 Sep 2018 12:48:13 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/09/etcd%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%A7%A3%E6%9E%90/</guid>
+      <description>&lt;p&gt;前一段时间的项目里用到了 Etcd（&lt;a href=&#34;http://jolestar.com/etcd-architecture），&#34;&gt;http://jolestar.com/etcd-architecture），&lt;/a&gt; 所以研究了一下它的源码以及实现。&lt;/p&gt;
+
+&lt;p&gt;网上关于 Etcd 的使用介绍的文章不少，但分析具体架构实现的文章不多，同时 Etcd v3的文档也非常稀缺。&lt;/p&gt;
+
+&lt;p&gt;本文通过分析 Etcd 的架构与实现，了解其优缺点以及瓶颈点，一方面可以学习分布式系统的架构，另外一方面也可以保证在业务中正确使用 Etcd，知其然同时知其所以然，避免误用。&lt;/p&gt;
+
+&lt;p&gt;最后介绍 Etcd 周边的工具和一些使用注意事项。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Macvlan,Calico和Flannel</title>
+      <link>https://jianwenz.github.io/2018/07/macvlancalico%E5%92%8Cflannel/</link>
+      <pubDate>Tue, 31 Jul 2018 11:08:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/macvlancalico%E5%92%8Cflannel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx原理和调优</title>
+      <link>https://jianwenz.github.io/2018/07/nginx%E5%8E%9F%E7%90%86%E5%92%8C%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Sat, 28 Jul 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/nginx%E5%8E%9F%E7%90%86%E5%92%8C%E8%B0%83%E4%BC%98/</guid>
+      <description>&lt;p&gt;nginx原理&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>部署Kubernetes本地镜像仓库</title>
+      <link>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 28 Jul 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</guid>
+      <description>https://www.cnblogs.com/zhenyuyaodidiao/p/6500950.html</description>
+    </item>
+    
+    <item>
+      <title>部署Kubernetes本地镜像仓库</title>
+      <link>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Sat, 28 Jul 2018 11:07:24 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/%E9%83%A8%E7%BD%B2kubernetes%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93/</guid>
+      <description>https://www.cnblogs.com/zhenyuyaodidiao/p/6500950.html</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes负载均衡详解</title>
+      <link>https://jianwenz.github.io/2018/07/kubernetes%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sat, 14 Jul 2018 11:06:00 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/07/kubernetes%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;p&gt;未完成&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Centos7部署Kubernetes集群</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dns on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/categories/dns/</link>
+    <description>Recent content in Dns on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Feb 2019 11:31:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/categories/dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DNS Rewrite(污染)实现</title>
+      <link>https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Tue, 26 Feb 2019 11:31:25 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;p&gt;需要屏蔽掉一些域名，&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Jianwen&#39;s Blog</title>
+    <link>https://jianwenz.github.io/tags/mysql/</link>
+    <description>Recent content in Mysql on Jianwen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Dec 2018 11:46:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://jianwenz.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL 5.7官方docker镜像分析</title>
+      <link>https://jianwenz.github.io/2018/12/mysql-5.7%E5%AE%98%E6%96%B9docker%E9%95%9C%E5%83%8F%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 21 Dec 2018 11:46:01 +0800</pubDate>
+      
+      <guid>https://jianwenz.github.io/2018/12/mysql-5.7%E5%AE%98%E6%96%B9docker%E9%95%9C%E5%83%8F%E5%88%86%E6%9E%90/</guid>
+      <description>&lt;p&gt;Docker官方的Mysql镜像的Dockerfile托管在Github上，地址如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker-library/mysql/tree/5836bc9af9deb67b68c32bebad09a0f7513da36e/5.6&#34;&gt;https://github.com/docker-library/mysql/tree/5836bc9af9deb67b68c32bebad09a0f7513da36e/5.6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;仔细研究了一下其Dockerfile，发现最有技术含量的倒不是其Dockerfile本身，无非是更新软件仓库，下载Mysql Server，稍微修改一下其配置文件。&lt;/p&gt;
+
+&lt;p&gt;倒是ENTRYPOINT对应的docker-entrypoint.sh很耐人寻味，这个文件相当详实，涉及了Mysql如何初始化，如何设置密码，如何启动服务等关键问题。&lt;/p&gt;
+
+&lt;p&gt;今天花费了大半天来分析这个脚本，果然是受益匪浅。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
