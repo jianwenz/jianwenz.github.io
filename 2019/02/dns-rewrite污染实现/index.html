@@ -8,18 +8,26 @@
 <meta name="generator" content="Hugo 0.54.0 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Zhang Jianwen">
 <meta name="keywords" content="DNS">
-<meta name="description" content="需要屏蔽掉一些域名，">
+<meta name="description" content="在某个项目中需要屏蔽掉一些域名，想到了可以用DNS Rewrite来实现。
+
+基本思路是拦截53端口的DNS请求，将DNS请求重定向到私有的DNS服务器上，在私有DNS服务器上控制DNS解析结果">
 
 
-<meta property="og:description" content="需要屏蔽掉一些域名，">
+<meta property="og:description" content="在某个项目中需要屏蔽掉一些域名，想到了可以用DNS Rewrite来实现。
+
+基本思路是拦截53端口的DNS请求，将DNS请求重定向到私有的DNS服务器上，在私有DNS服务器上控制DNS解析结果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DNS Rewrite(污染)实现">
 <meta name="twitter:title" content="DNS Rewrite(污染)实现">
 <meta property="og:url" content="https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/">
 <meta property="twitter:url" content="https://jianwenz.github.io/2019/02/dns-rewrite%E6%B1%A1%E6%9F%93%E5%AE%9E%E7%8E%B0/">
 <meta property="og:site_name" content="Jianwen&#39;s Blog">
-<meta property="og:description" content="需要屏蔽掉一些域名，">
-<meta name="twitter:description" content="需要屏蔽掉一些域名，">
+<meta property="og:description" content="在某个项目中需要屏蔽掉一些域名，想到了可以用DNS Rewrite来实现。
+
+基本思路是拦截53端口的DNS请求，将DNS请求重定向到私有的DNS服务器上，在私有DNS服务器上控制DNS解析结果">
+<meta name="twitter:description" content="在某个项目中需要屏蔽掉一些域名，想到了可以用DNS Rewrite来实现。
+
+基本思路是拦截53端口的DNS请求，将DNS请求重定向到私有的DNS服务器上，在私有DNS服务器上控制DNS解析结果">
 <meta property="og:locale" content="en-us">
 
   
@@ -242,7 +250,15 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>需要屏蔽掉一些域名，</p>
+              <p>在某个项目中需要屏蔽掉一些域名，想到了可以用DNS Rewrite来实现。</p>
+
+<p>基本思路是拦截53端口的DNS请求，将DNS请求重定向到私有的DNS服务器上，在私有DNS服务器上控制DNS解析结果</p>
+
+<h4 id="使用dnsmasq搭建dns服务器">使用DNSmasq搭建DNS服务器</h4>
+
+<p><strong>安装和配置DNSmasq服务</strong></p>
+
+<h4 id="使用iptables拦截53端口并发转发到dns服务器">使用iptables拦截53端口并发转发到DNS服务器</h4>
 
 <pre><code>Chain PREROUTING (policy ACCEPT)
 target     prot opt source               destination         
@@ -256,6 +272,10 @@ Chain OUTPUT (policy ACCEPT)
 target     prot opt source               destination         
 
 </code></pre>
+
+<h4 id="测试结果">测试结果</h4>
+
+<p>ping</p>
               
             </div>
           </div>
@@ -474,7 +494,7 @@ target     prot opt source               destination
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        System Architect
+        PreSales~Product Planning~Solution~SDN/SD-WAN~Software~Cloud Computing
       </div>
     
     
@@ -551,7 +571,9 @@ target     prot opt source               destination
                   Feb 2, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>需要屏蔽掉一些域名，</p></div>
+              <div class="media-content hide-xs font-merryweather"><p>在某个项目中需要屏蔽掉一些域名，想到了可以用DNS Rewrite来实现。</p>
+
+<p>基本思路是拦截53端口的DNS请求，将DNS请求重定向到私有的DNS服务器上，在私有DNS服务器上控制DNS解析结果</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
